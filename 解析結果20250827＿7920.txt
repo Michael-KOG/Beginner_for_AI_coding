@@ -1,0 +1,58 @@
+究極のPC環境・GPUベンチマークツール - 診断レポート
+診断日時: 2025-08-27 10:30:05
+
+--- 💻 システム情報 ---
+OS: Windows 10 (AMD64)
+プロセッサ: Intel64 Family 6 Model 85 Stepping 7, GenuineIntel
+CPUコア数: 20 (物理) / 40 (論理)
+メモリ(RAM): 合計 63.63 GB / 空き 41.51 GB (34.8 % 使用中)
+
+--- 🎮 GPU情報 (nvidia-smi) ---
+✅ NVIDIA GPUを 1 台検出しました。
+  [GPU 0]
+    モデル名: Quadro P5000
+    ドライバVer: 580.88
+    メモリ: 4076 MB / 15360 MB 使用中
+    使用率: 9 %
+    温度: 54 °C
+
+--- 🔥 PyTorch & CUDA連携 ---
+✅ PyTorch バージョン: 2.7.1+cu118
+CUDA利用可能か: ✅ はい
+PyTorchビルド時CUDA Ver: 11.8
+検出されたCUDAデバイス数: 1
+  GPU 0: Quadro P5000 (15.00 GB)
+cuDNN バージョン: 90100
+
+--- 🐍 Python環境 整合性診断 ---
+📜 スクリプト実行中のPython: C:\Users\Shimada\anaconda3\envs\rag_llm_env\python.exe
+📦 VIRTUAL_ENV (venv/virtualenv): 未設定
+📦 CONDA_PREFIX (Conda): C:\Users\Shimada\anaconda3\envs\rag_llm_env
+🖥️ ターミナルの'python'コマンド: C:\Users\Shimada\anaconda3\envs\rag_llm_env\python.exe
+
+[診断結果]
+✅ 良好: VSCodeとターミナルは同じPython環境を認識しています。
+
+--- 📚 主要ライブラリ確認 ---
+  ✅ numpy       : v2.2.5
+  ✅ pandas      : v2.3.1
+  ✅ matplotlib  : v3.10.0
+  ✅ scipy       : v1.16.0
+  ✅ sklearn     : v1.7.1
+  ✅ cupy        : v13.5.1
+  ✅ psutil      : v5.9.0
+  ✅ requests    : v2.32.4
+
+--- 🚀 CPU vs GPU ベンチマーク (行列計算) ---
+
+[軽量テスト: 100x100 行列]
+  CPU 実行時間: 1.9298 ms
+  GPU 実行時間: 12.6513 ms
+  🚀 速度比: GPUはCPUの 0.15 倍高速
+
+[重量テスト: 10000x10000 行列]
+  CPU 実行時間: 2.3408 秒
+  GPU 実行時間: 0.3033 秒
+  🚀🚀 速度比: GPUはCPUの 7.72 倍高速 (大規模計算)
+
+--- ✅ 診断完了 ---
